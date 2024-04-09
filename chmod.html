@@ -12,11 +12,14 @@
         </header>
         <section>
             <h2 class="section-heading">Descripción:</h2>
-            <p>El comando <code class="code">chmod</code> (descripción del comando).</p>
+            <p> <b> chmod </b> es un comando que se utiliza en sistemas operativos basados en Unix y Unix-like (como Linux y macOS) para cambiar los permisos de acceso a archivos y directorios.
+                <br>
+                El nombre <b> chmod </b> es una abreviatura de "change mode". Los permisos de acceso determinan qu&eacute; usuarios o grupos pueden leer, escribir o ejecutar un archivo.
+            </p>
             <h2 class="section-heading">Opciones:</h2>
             <pre class="code">
                 <code>
-                    -(opción1), --(nombre completo)         (Descrioción de lo que hace la opcion1)
+                    -c, --changes         Reporta solo cuando se realiza un cambio 
                     -(opcion2), --(nombre completo)         (Descrioción de lo que hace la opcion2)
                     -(opcion3), --(nombre completo)         (Descrioción de lo que hace la opcion3)
                 </code>
@@ -24,7 +27,13 @@
             <h2 class="section-heading">Ejemplos de uso:</h2>
             <pre class="code">
                 <code>
-                    (ejemplo de uso del comando con y sin las opciones)    (Breve explicación de lo que hace el ejemplo)
+                    
+                    chmod 744 archivo.txt        otorga permisos de lectura, escritura y ejecución al propietario del archivo (7), 
+                                                 mientras que el grupo y otros usuarios solo tienen permiso de lectura (4),
+                                                 todo esto para el archivo archivo.txt.
+                    
+                    chmod -c ug+x ejemplo.txt    Añade permisos de ejecución (+x) para el propietario (u) y el grupo (g) del archivo ejemplo.txt.
+                                                 mostrando un mensaje sólo si se realizan cambios en los permisos del archivo.
                     (ejemplo de uso del comando con y sin las opciones)    (Breve explicación de lo que hace el ejemplo)
                 </code>
             </pre>
