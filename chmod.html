@@ -26,6 +26,8 @@
                                           un directorio de forma recursiva.
 
                     -x, --remove-exec     Elimina los permisos de ejecución de un archivo.
+
+                    -v, --verbose         Muestra un mensaje por cada fichero procesado
                 </code>
             </pre>
             <h2 class="section-heading">Ejemplos de uso:</h2>
@@ -46,6 +48,8 @@
                     chmod -x script.sh              Supongamos que tenemos el archivo “script.sh” y tiene permisos de lectura, escritura y ejecución para el propietario. 
                                                     Con este comando se eliminan los permisos de ejecución para el propietario. Con chmod go-x script.sh eliminaríamos permisos 
                                                     de ejecución para el grupo y otros.
+
+                    chmod -v u=rw cuentas.txt       Cambia los permisos del usuario en el archivo cuentas.txt, y envia un mensaje tras cambiar los permisos
                 </code>
             </pre>
         </section>
