@@ -25,7 +25,7 @@
                                           de manera recursiva. Es útil cuando se desea aplicar los mismos permisos a todo el contenido de 
                                           un directorio de forma recursiva.
 
-                    -(opcion3), --(nombre completo)         (Descrioción de lo que hace la opcion3)
+                    -x, --remove-exec     Elimina los permisos de ejecución de un archivo.
                 </code>
             </pre>
             <h2 class="section-heading">Ejemplos de uso:</h2>
@@ -43,7 +43,9 @@
                                                     subdirectorios. Los permisos 755 significan que el propietario tendrá permisos de lectura, escritura 
                                                     y ejecución (7), mientras que el grupo y otros usuarios solo tendrán permisos de lectura y ejecución (5).
                                             
-                    (ejemplo de uso del comando con y sin las opciones)    (Breve explicación de lo que hace el ejemplo)
+                    chmod -x script.sh              Supongamos que tenemos el archivo “script.sh” y tiene permisos de lectura, escritura y ejecución para el propietario. 
+                                                    Con este comando se eliminan los permisos de ejecución para el propietario. Con chmod go-x script.sh eliminaríamos permisos 
+                                                    de ejecución para el grupo y otros.
                 </code>
             </pre>
         </section>
