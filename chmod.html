@@ -19,8 +19,12 @@
             <h2 class="section-heading">Opciones:</h2>
             <pre class="code">
                 <code>
-                    -c, --changes         Reporta solo cuando se realiza un cambio 
-                    -(opcion2), --(nombre completo)         (Descrioción de lo que hace la opcion2)
+                    -c, --changes         Reporta solo cuando se realiza un cambio.
+
+                    -R, --recursive       Esta opción permite cambiar los permisos de un directorio y todos sus archivos y subdirectorios 
+                                          de manera recursiva. Es útil cuando se desea aplicar los mismos permisos a todo el contenido de 
+                                          un directorio de forma recursiva.
+
                     -(opcion3), --(nombre completo)         (Descrioción de lo que hace la opcion3)
                 </code>
             </pre>
@@ -28,12 +32,17 @@
             <pre class="code">
                 <code>
                     
-                    chmod 744 archivo.txt        otorga permisos de lectura, escritura y ejecución al propietario del archivo (7), 
-                                                 mientras que el grupo y otros usuarios solo tienen permiso de lectura (4),
-                                                 todo esto para el archivo archivo.txt.
+                    chmod 744 archivo.txt           Otorga permisos de lectura, escritura y ejecución al propietario del archivo (7), 
+                                                    mientras que el grupo y otros usuarios solo tienen permiso de lectura (4),
+                                                    todo esto para el archivo archivo.txt.
                     
-                    chmod -c ug+x ejemplo.txt    Añade permisos de ejecución (+x) para el propietario (u) y el grupo (g) del archivo ejemplo.txt.
-                                                 mostrando un mensaje sólo si se realizan cambios en los permisos del archivo.
+                    chmod -c ug+x ejemplo.txt       Añade permisos de ejecución (+x) para el propietario (u) y el grupo (g) del archivo ejemplo.txt.
+                                                    mostrando un mensaje sólo si se realizan cambios en los permisos del archivo.
+
+                    chmod -R 755 directorio/        Cambiará los permisos de manera recursiva en el directorio directorio/ y todos sus archivos y 
+                                                    subdirectorios. Los permisos 755 significan que el propietario tendrá permisos de lectura, escritura 
+                                                    y ejecución (7), mientras que el grupo y otros usuarios solo tendrán permisos de lectura y ejecución (5).
+                                            
                     (ejemplo de uso del comando con y sin las opciones)    (Breve explicación de lo que hace el ejemplo)
                 </code>
             </pre>
