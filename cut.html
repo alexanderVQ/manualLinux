@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manual comandos de linux</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Comando <span class="command">CUT</span></h1>
+        </header>
+        <section>
+            <h2 class="section-heading">Descripción:</h2>
+            <p>El comando cut en Linux se utiliza para extraer secciones concretas de archivos de texto, 
+                permitiendo así sólo mostrar secciones específicas. Puedes especificar los campos a cortar utilizando delimitadores como espacios, 
+                tabulaciones o caracteres específicos. Para seleccionar los delimitadores se utiliza la opción “-d”.</p>
+            <h2 class="section-heading">Opciones:</h2>
+            <pre class="code">
+                <code>
+                    -f --fields         Selecciona los campos que quedan despu&eacute;s de aplicar el cut. Los campos se indican despu&eacute;s del “-f”.
+
+                    -c, --characters    Esta opción permite seleccionar caracteres específicos en lugar de campos delimitados. Se puede utilizar para 
+                                        extraer partes específicas de cada línea en función de la posición de los caracteres en lugar de los campos delimitados.
+
+                    -b, --bytes         Seleciona solo los bites especificados. El Byte se aplica despues del -b
+
+                    -d, --delimiter     Especifica el carácter que se utilizará como delimitador para separar los campos.    
+
+                </code>
+            </pre>
+            <h2 class="section-heading">Ejemplos de uso:</h2>
+            <pre class="code">
+                <code>
+                    cut -d ‘;’ -f 1,3 datos.txt    El archivo datos.txt lo fracciona por los delimitadores “,”. A continuación, selecciona
+                                                   las fracciones 1 y 3 que ha creado.
+
+                    cut -c 1-5 archivo.txt         En este ejemplo, el comando cut seleccionará los caracteres en las posiciones 1 a 5 de 
+                                                   cada línea en el archivo archivo.txt. Esto significa que se extraerán los primeros cinco 
+                                                   caracteres de cada línea y se mostrarán como resultado.
+
+                    cut -b 2 texto.txt             Mostrar el segundo Byte de cada una de las líneas del archivo texto.txt
+                
+                    cut -d '|' -f 1 datos.txt      Muestra solo el primer campo de cada línea, que en este caso son los nombres de las personas.
+
+                </code>
+            </pre>
+        </section>
+    </body>
+</html>

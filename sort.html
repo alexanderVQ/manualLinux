@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manual comandos de linux</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Comando <span class="command">SORT</span></h1>
+        </header>
+        <section>
+            <h2 class="section-heading">Descripción:</h2>
+            <p>El comando <code class="code">sort</code> muestra todos los archivos ordenados por la salida estándar. Se lee la entrada estándar, si no se define ningún ARCHIVO o bien se indica '-'</p>
+            <h2 class="section-heading">Opciones:</h2>
+            <pre class="code">
+                <code>
+                    -u, --unique                     muestra los archivos sin contenido duplicado
+
+                    -h, --human-numeric-sort         compara números en formato humanamete entendible (p.ej:2K,100, 45M,...)
+
+                    -k, --key=POS1[,POS2]            Este parámetro permite especificar una o más posiciones de campo para realizar 
+                                                     la ordenación. Se puede utilizar para ordenar archivos basados en una columna 
+                                                     específica en lugar de la línea completa.
+
+                    -r, --reverse                    Ordena de forma inversa los elementos ordenados de una lista.
+                    
+                    -n, --numeric-sort               Ordena de manera númerica en vez de ordenar de manera alfabética. Interpreta cada línea 
+                                                     del archivo de entrada como un número y ordena en función de estos valores numéricos en lugar 
+                                                     de ordenar alfabéticamente.
+                </code>
+            </pre>
+            <h2 class="section-heading">Ejemplos de uso:</h2>
+            <pre class="code">
+                <code>
+                    sort ejemplo.txt                muestra ordenado alfaveticamente el contenido del archivo "ejemplo.txt"
+
+                    sort -u ejemplo.txt             muestra ordenado alfaveticamente el contenido agrupando y eliminando el contenido repetido del 
+                                                    archivo "ejemolo.txt"
+
+                    sort -h ejemolo.txt             muestra ordenado numericamente en formato legible para el humano del archivo "ejemplo.txt"
+
+                    sort -k 2,2 -n datos.csv        Este comando ordena el archivo CSV datos.csv numéricamente según los valores de la segunda 
+                                                    columna. La opción -k 2,2 especifica que solo se debe considerar la segunda columna para 
+                                                    la ordenación y -n indica que la ordenación debe ser numérica.
+
+                    sort -r lista.txt               Supongamos que tenemos un txt llamado lista que tiene nombre de personas ordenados de la 
+                                                    A a la Z. Con este comando, invertiríamos el orden de esta lista, ordenando de la Z 
+                                                    a la A. Si queremos que esta lista reordenada aparezca en un nuevo archivo, 
+                                                    utilizaríamos sort -r lista.txt > listaReordenada.txt y nos crearía la lista reordenada 
+                                                    en listaReordenada.txt
+                                                    
+                    sort -n numeros.txt             Ordena los números en el archivo numeros.txt de manera numérica, en lugar de alfabética, 
+                                                    produciendo una salida ordenada de menor a mayor.
+                </code>
+            </pre>
+        </section>
+    </body>
+</html>

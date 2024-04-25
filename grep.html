@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manual comandos de linux</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Comando <span class="command">GREP</span></h1>
+        </header>
+        <section>
+            <h2 class="section-heading">Descripción:</h2>
+            <p>El comando <b>grep</b> es una herramienta de línea de comandos utilizada en sistemas Unix y 
+                Unix-like para buscar patrones de texto dentro de archivos. Su nombre proviene de la expresión "global regular 
+                expression print", que se refiere a su capacidad para buscar texto utilizando expresiones regulares y mostrar 
+                los resultados coincidentes. grep es una herramienta versátil y potente que se utiliza comúnmente para filtrar 
+                y encontrar líneas de texto que coinciden con un patrón específico en archivos de texto.
+                <br>
+                <br>
+                <p style="text-align: center;"><i>grep opcion/es "cadena_de_texto" fichero_donde_buscar</i></p>
+            </p>
+            <h2 class="section-heading">Opciones:</h2>
+            <pre class="code">
+                <code>
+                    -i, --ignore-case               Ignora mayúsculas y minúsculas
+                    
+                    -l, --files-with-matches        Muestra el nombre de cada fichero de entrada que produciría alguna salida.
+                                                    La búsqueda se detendrá en la primera concordancia.
+                    -c, --count                     Cuenta las lineas en las que aparezca el patron establecido
+
+                    -r --recursive                  Se utiliza para buscar de forma recursiva en los directorios y subdirectorios.
+                </code>
+            </pre>
+            <h2 class="section-heading">Ejemplos de uso:</h2>
+            <pre class="code">
+                <code>
+                    grep "prof*" archivo.txt            Busca el patrón "prof*" en el archivo llamado "archivo.txt"
+
+                    grep -i "patrón" archivo.txt        En este ejemplo, grep buscará el patrón especificado en el archivo archivo.txt, 
+                                                        ignorando si las letras del patrón están en mayúsculas o minúsculas.
+                                                        Esto significa que coincidirá con todas las ocurrencias del patrón,
+                                                        independientemente de su caso. Por ejemplo, si el archivo contiene líneas con 
+                                                        "Patrón", "patrón" o "PAtRóN", todas serán consideradas como coincidencias.
+
+                    grep -l "palabra" *.txt             Busca la palabra "palabra" en todos los archivos de texto en el directorio actual 
+                                                        (*.txt) y muestra solo los nombres de los archivos que contienen esa palabra,
+                                                        sin mostrar las líneas específicas que coinciden.
+
+                    grep -c "hola" saludo.txt           Cuenta el número de Líneas de archivo saludo.txt, de las cuales, contengan el
+                                                        patron "hola".
+
+                    grep -r “importante” Documentos/	El comando busca en la carpeta “Documentos” y mostrará las líneas de los archivos de 
+                                                        texto que contenga la palabra “importante” dentro de dicha carpeta y sus subcarpetas.
+                </code>
+            </pre>
+        </section>
+    </body>
+</html>
